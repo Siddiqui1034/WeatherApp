@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="Search" class="search-box" />
+        <button>
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            view-box="0 0 1024 1024"
+            width="1.5em"
+            height="1.5em"
+            xmins="http://www.w3.org/2000"
+          >
+            <path>
+
+            </path>
+          </svg>
+          Search
+        </button>
+      </div>
+
+      <div class="weather loading">
+        <h2 class="city">Weather in Nairobi</h2>
+        <h1 class="temp">51 C</h1>
+        <div class="flex">
+            <img src="https://openweathermap.org//img/wn04n.png" 
+            alt="cloudy" 
+            class="icon">
+            <div class="description">Cloudy</div>
+        </div>
+
+        <div class="">
+            <div>Humidity : 60%</div>
+            <div>Wind Speed: 6.2km/h</div>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
