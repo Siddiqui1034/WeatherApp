@@ -5,46 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="card">
-      <div class="search">
-        <input type="text" placeholder="Search" class="search-box" />
-        <button>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            view-box="0 0 1024 1024"
-            width="1.5em"
-            height="1.5em"
-            xmins="http://www.w3.org/2000"
-          >
-            <path>
+   
 
-            </path>
-          </svg>
-          Search
-        </button>
+  </head>
+  <body id="container" onload="checkLocation()" >
+
+    <div class="card">
+
+      <div class="searchContainer">
+        <input class="searchInput" id="searchCity" type="text" placeholder="Enter City Name" />
+        <img class="searchIcon" src="search.png" alt="search" id="searchCity" width="50px" height="50px">         
       </div>
 
-      <div class="weather loading">
-        <h2 class="city">Weather in Nairobi</h2>
-        <h1 class="temp">51 C</h1>
-        <div class="flex">
-            <img src="https://openweathermap.org//img/wn04n.png" 
-            alt="cloudy" 
-            class="icon">
-            <div class="description">Cloudy</div>
+      <div class="valueContainer">
+        <div class="lefPane">
+            <p class="location">Current Location</p>
+            <p class="latitude">latitude</p>
+            <p class="longitude">longitude</p>
+            <h1 class="place">Place:</h1>
+            <p class="time">Time</p>
+            <p class="day">WeekDay, Day Month Year</p>
+            <p class="temperature">Temperature</p>
         </div>
-
-        <div class="">
-            <div>Humidity : 60%</div>
-            <div>Wind Speed: 6.2km/h</div>
+        <div class="rightPane">
+            <p>icon</p>
+            <p>icon Type</p>
+            <p class="searchedCity">City</p>
+            <p class="sear">Temperature</p>
+            <p>Humidity</p>
+            <p>Visibility</p>
+            <p>Wind Speed</p>
         </div>
-
+        <div>
+            5 Day Forecast 
+        </div>
       </div>
 
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
