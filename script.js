@@ -79,7 +79,16 @@ searchBtn.addEventListener('click', getCityCoordinates)
 function checkLocation(){
     // check if the geolocation api is available in the browser
     if ("geolocation" in navigator){
-        // Attempt to get the user's current position        
+        // Attempt to get the user's current position 
+        window.addEventListener('load', () => {
+            const imageContainer = document.querySelector('.imageGif');
+            imageContainer.style.display = 'flex'; // Show the container
+            setTimeout(() => {
+                const image = document.querySelector('.fade-in');
+                image.style.opacity = 1; // Trigger the fade-in effect
+            }, 100); // Small delay to ensure the container is displayed before fading in
+        });      
+        console.log("Location access Not granted")  
         navigator.geolocation.getCurrentPosition(
             function (position){
                 // success callback
@@ -107,7 +116,7 @@ function checkLocation(){
         )
     }
     else{
-        console.log("Location access Not granted")   
+        // console.log("Location access Not granted")   
     }  
 }
 
